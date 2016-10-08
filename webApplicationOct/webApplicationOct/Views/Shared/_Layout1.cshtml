@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -7,15 +8,16 @@
     <script src="~/scripts/bootstrap.min.js"></script>
     <script src="~/scripts/jquery-1.9.1.min.js"></script>
     <link href="~/StyleSheetMain.css" rel="stylesheet" />
-    <title>@ViewBag.Title</title>   
+    <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-10">Jag är 10 stor</div>
-            <div class="col-md-2">Jag är 2 stor</div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <a class="navbar-brand col-md-1" href="/">Home</a>
+            <a class="navbar-brand col-md-1" href="../Home/About">About</a>
+            <a class="navbar-brand col-md-1" href="">Github</a>
         </div>
-    </div>
+    </nav>
 
     @RenderBody()
 

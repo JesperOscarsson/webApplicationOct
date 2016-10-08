@@ -8,13 +8,17 @@ namespace webApplicationOct.Controllers
 {
     public class HomeController : Controller
     {
+
+        string secretMessage = "Skytte på banan";
+        string secretMessage2 = "Markera på banan";
+        
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            return View(secretMessage);
         }
 
-        public ActionResult About()
+        public ActionResult About(string secretMessage)
         {
             return View();
         }
