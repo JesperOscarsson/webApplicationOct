@@ -33,7 +33,7 @@ namespace webApplicationOct.Controllers
 
         public ActionResult Qualifications()
         {
-            return View();
+            return View(ExperienceList);
         }
 
         public ActionResult Gallery()

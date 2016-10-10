@@ -1,10 +1,30 @@
-﻿
+﻿@model System.Collections.Generic.List<object>
 @{
     ViewBag.Title = "Qualifications";
     Layout = "~/Views/Shared/_Layout1.cshtml";
 }
 
 <div class="container">
-    
+    <!--Prints all Education items in the ExperienceList-->
+    @foreach (webApplicationOct.Models.Education item in Model)
+    {
+        <p>@item.getEducation()</p>
+    }
+</div>
+
+<div class="container">
+    <!--Prints all TechnialKnowledge items in the ExperienceList-->
+    @foreach (webApplicationOct.Models.TechicalKnowledge item in Model)
+    {
+        <p>@item</p>
+    }
+</div>
+
+<div class="container">
+    <!--Prints all CommonKnowledge items in the ExperienceList-->
+    @foreach (webApplicationOct.Models.CommonKnowledge item in Model)
+    {
+        <p>@item</p>
+    }
 </div>
 
