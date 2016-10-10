@@ -1,8 +1,33 @@
 ﻿body {
-    background-color: #6f29f3;
+    margin-top: 5%;
+    background-color: #8080ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #eee;
 }
 
-footer {
-    background-color: #4710a1;
+nav {
+    background-color: #eee;
+}
+
+#footer {
+    color: #242121;
+    padding: 2px 0 2px 2px;
+}
+
+a {
+    text-align: center;
+    margin-right: 1%;
+}
+
+#IndexBtn {
+    text-decoration: none;
+    color: #eee;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0.5% 1% 0.5% 1%;
+}
+
+#IndexBtn:hover {
+    color: #8080ff;
+    background-color: #eee;
 }

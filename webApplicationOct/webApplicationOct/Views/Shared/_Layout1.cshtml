@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -11,18 +10,22 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand col-md-1" href="/">Home</a>
-            <a class="navbar-brand col-md-1" href="../Home/About">About</a>
-            <a class="navbar-brand col-md-1" href="">Github</a>
+            <a class="navbar-brand col-md-1" href="../Home/About">About</a>   
+            <a class="navbar-brand col-md-1" href="../Home/Qualifications">Qualifications</a>
+            <a class="navbar-brand col-md-1" href="https://github.com/JesperOscarsson/webApplicationOct">Github</a>
+            <a class="navbar-brand col-md-1" href="../Home/Gallery">Gallery</a>
         </div>
     </nav>
 
     @RenderBody()
 
-    <footer>
-        <p>(c) 2017 Foobar Inc.</p>
-    </footer>
+    <nav class="navbar-fixed-bottom">
+        <footer class="container-fluid" id="footer">
+            (c) 2017 Foobar Inc.
+        </footer>
+    </nav>
 </body>
 </html>

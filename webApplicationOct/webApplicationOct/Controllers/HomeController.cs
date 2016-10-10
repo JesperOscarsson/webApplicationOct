@@ -7,18 +7,19 @@ using System.Web.Mvc;
 namespace webApplicationOct.Controllers
 {
     public class HomeController : Controller
-    {
-
-        string secretMessage = "Skytte på banan";
-        string secretMessage2 = "Markera på banan";
-        
+    {     
         // GET: Home
         public ActionResult Index()
         {
-            return View(secretMessage);
+            return View();
         }
 
-        public ActionResult About(string secretMessage)
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Qualifications()
         {
             return View();
         }
