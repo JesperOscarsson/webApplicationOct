@@ -5,7 +5,14 @@ using System.Web;
 
 namespace webApplicationOct.Models
 {
-    public class Education
+    public class Experience
+    {
+        public Experience()
+        {
+        }
+    }
+
+    public class Education : Experience
     {
         public Education()
         {
@@ -15,23 +22,37 @@ namespace webApplicationOct.Models
         public string School { get; set; }
         public string Course { get; set; }
 
-        public string getEducation()
+        public override string ToString()
         {
             return string.Format("Studied {0} at {1} during {2}", Course, School, Period);
         }
     }
 
-    public class TechicalKnowledge
+    public class TechnicalKnowledge : Experience
     {
-        public TechicalKnowledge()
+        public TechnicalKnowledge()
         {
+        }
+
+        //Properties needs adding
+
+        public override string ToString()
+        {
+            return "tech";
         }
     }
 
-    public class CommonKnowledge
+    public class CommonKnowledge : Experience
     {
         public CommonKnowledge()
         {
+        }
+
+        //Properties needs adding
+
+        public override string ToString()
+        {
+            return "common";
         }
     }
 }

@@ -9,15 +9,17 @@ namespace webApplicationOct.Controllers
 {
     public class HomeController : Controller
     {
-        private List<object> ExperienceList;
+        private List<Experience> ExperienceList;
 
         public HomeController()
         {
-            ExperienceList = new List<object>();
+            ExperienceList = new List<Experience>();
             //Below add stuff to list
             ExperienceList.Add(new Education() { Course = "Placeholder1", Period = "1786 - 2016", School = "Östra" });
             ExperienceList.Add(new Education() { Course = "Placeholder2", Period = "1786 - 2016", School = "Östra" });
             ExperienceList.Add(new Education() { Course = "Placeholder3", Period = "1786 - 2016", School = "Östra" });
+            ExperienceList.Add(new TechnicalKnowledge());
+            ExperienceList.Add(new CommonKnowledge());
         }       
         
         // GET: Home
