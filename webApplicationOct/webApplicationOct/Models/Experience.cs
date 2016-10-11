@@ -34,11 +34,12 @@ namespace webApplicationOct.Models
         {
         }
 
-        //Properties needs adding
+        public string Skill { get; set; }
+        public string Proficiency { get; set; }
 
         public override string ToString()
         {
-            return "tech";
+            return string.Format("Skill: {0}    Proficiency: {1}", Skill, Proficiency);
         }
     }
 
@@ -48,11 +49,12 @@ namespace webApplicationOct.Models
         {
         }
 
-        //Properties needs adding
+        public string CommonSkill { get; set; }
+        public string CommonProficiency { get; set; }
 
         public override string ToString()
         {
-            return "common";
+            return string.Format("Skill: {0}    Proficiency: {1}", CommonSkill, CommonProficiency);
         }
     }
 }
