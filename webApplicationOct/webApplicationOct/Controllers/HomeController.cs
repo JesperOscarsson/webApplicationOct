@@ -18,8 +18,11 @@ namespace webApplicationOct.Controllers
             ExperienceList.Add(new Education() { Course = "Placeholder1", Period = "1786 - 2016", School = "Östra" });
             ExperienceList.Add(new Education() { Course = "Placeholder2", Period = "1786 - 2016", School = "Östra" });
             ExperienceList.Add(new Education() { Course = "Placeholder3", Period = "1786 - 2016", School = "Östra" });
-            ExperienceList.Add(new TechnicalKnowledge());
-            ExperienceList.Add(new CommonKnowledge());
+            ExperienceList.Add(new TechnicalKnowledge() { Skill = "Placeholder4", Proficiency = "Ok" });
+            ExperienceList.Add(new TechnicalKnowledge() { Skill = "Placeholder5", Proficiency = "Ok" });
+            ExperienceList.Add(new CommonKnowledge() { CommonSkill = "Placeholder6", CommonProficiency = "Ok" });
+            ExperienceList.Add(new CommonKnowledge() { CommonSkill = "Placeholder7", CommonProficiency = "Ok" });
+            ExperienceList.Add(new CommonKnowledge() { CommonSkill = "Placeholder8", CommonProficiency = "Ok" });
         }       
         
         // GET: Home
