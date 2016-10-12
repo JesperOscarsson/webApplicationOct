@@ -14,7 +14,7 @@ namespace AdminServerManager
     
     public partial class CommonKnowledge
     {
-        public byte[] CommonSkill { get; set; }
-        public byte[] CommonProficiency { get; set; }
+        public string CommonSkill { get; set; }
+        public string CommonProficiency { get; set; }
     }
 }

@@ -14,8 +14,8 @@ namespace AdminServerManager
     
     public partial class Education
     {
-        public byte[] School { get; set; }
-        public byte[] Period { get; set; }
-        public byte[] Course { get; set; }
+        public string School { get; set; }
+        public string Period { get; set; }
+        public string Course { get; set; }
     }
 }

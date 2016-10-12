@@ -9,23 +9,23 @@
           <Key>
             <PropertyRef Name="CommonSkill" />
           </Key>
-          <Property Name="CommonSkill" Type="varbinary" MaxLength="50" Nullable="false" />
-          <Property Name="CommonProficiency" Type="varbinary" MaxLength="20" Nullable="false" />
+          <Property Name="CommonSkill" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CommonProficiency" Type="varchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="Education">
           <Key>
             <PropertyRef Name="School" />
           </Key>
-          <Property Name="School" Type="varbinary" MaxLength="50" Nullable="false" />
-          <Property Name="Period" Type="varbinary" MaxLength="20" Nullable="false" />
-          <Property Name="Course" Type="varbinary" MaxLength="50" Nullable="false" />
+          <Property Name="School" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Period" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Course" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="TechnicalKnowledge">
           <Key>
             <PropertyRef Name="Skill" />
           </Key>
-          <Property Name="Skill" Type="varbinary" MaxLength="50" Nullable="false" />
-          <Property Name="Proficiency" Type="varbinary" MaxLength="20" Nullable="false" />
+          <Property Name="Skill" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Proficiency" Type="varchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityContainer Name="T4DBModelStoreContainer">
           <EntitySet Name="CommonKnowledge" EntityType="Self.CommonKnowledge" Schema="dbo" store:Type="Tables" />
@@ -41,23 +41,23 @@
           <Key>
             <PropertyRef Name="CommonSkill" />
           </Key>
-          <Property Name="CommonSkill" Type="Binary" MaxLength="50" FixedLength="false" Nullable="false" />
-          <Property Name="CommonProficiency" Type="Binary" MaxLength="20" FixedLength="false" Nullable="false" />
+          <Property Name="CommonSkill" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CommonProficiency" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="Education">
           <Key>
             <PropertyRef Name="School" />
           </Key>
-          <Property Name="School" Type="Binary" MaxLength="50" FixedLength="false" Nullable="false" />
-          <Property Name="Period" Type="Binary" MaxLength="20" FixedLength="false" Nullable="false" />
-          <Property Name="Course" Type="Binary" MaxLength="50" FixedLength="false" Nullable="false" />
+          <Property Name="School" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Period" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Course" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="TechnicalKnowledge">
           <Key>
             <PropertyRef Name="Skill" />
           </Key>
-          <Property Name="Skill" Type="Binary" MaxLength="50" FixedLength="false" Nullable="false" />
-          <Property Name="Proficiency" Type="Binary" MaxLength="20" FixedLength="false" Nullable="false" />
+          <Property Name="Skill" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Proficiency" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityContainer Name="T4DBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CommonKnowledges" EntityType="Self.CommonKnowledge" />

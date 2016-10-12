@@ -14,7 +14,7 @@ namespace AdminServerManager
     
     public partial class TechnicalKnowledge
     {
-        public byte[] Skill { get; set; }
-        public byte[] Proficiency { get; set; }
+        public string Skill { get; set; }
+        public string Proficiency { get; set; }
     }
 }

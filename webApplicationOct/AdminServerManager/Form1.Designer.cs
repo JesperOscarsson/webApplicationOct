@@ -151,9 +151,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 63);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Edit a:";
+            this.label3.Text = "Edit:";
             // 
             // pnlEducation
             // 
@@ -272,7 +272,7 @@
             this.pnlTech.Controls.Add(this.btnTechEdit);
             this.pnlTech.Controls.Add(this.label11);
             this.pnlTech.Controls.Add(this.lBoxTech);
-            this.pnlTech.Location = new System.Drawing.Point(15, 166);
+            this.pnlTech.Location = new System.Drawing.Point(15, 164);
             this.pnlTech.Name = "pnlTech";
             this.pnlTech.Size = new System.Drawing.Size(547, 352);
             this.pnlTech.TabIndex = 7;
@@ -503,6 +503,7 @@
             this.btnAddAdd.TabIndex = 4;
             this.btnAddAdd.Text = "Add";
             this.btnAddAdd.UseVisualStyleBackColor = true;
+            this.btnAddAdd.Click += new System.EventHandler(this.btnAddAdd_Click);
             // 
             // pnlAddEducation
             // 
@@ -682,11 +683,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 532);
+            this.ClientSize = new System.Drawing.Size(574, 529);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.pnlPersonal);
             this.Controls.Add(this.pnlTech);
+            this.Controls.Add(this.pnlPersonal);
             this.Controls.Add(this.pnlAdd);
             this.Controls.Add(this.pnlEducation);
             this.Controls.Add(this.label3);

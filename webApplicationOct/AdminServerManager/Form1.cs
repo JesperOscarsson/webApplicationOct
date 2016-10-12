@@ -25,18 +25,21 @@ namespace AdminServerManager
         private void btnEducation_Click(object sender, EventArgs e)
         {
             clearPanels();
+            updateLists();
             pnlEducation.Visible = true;
         }
 
         private void btnTech_Click(object sender, EventArgs e)
         {
             clearPanels();
+            updateLists();
             pnlTech.Visible = true;
         }
 
         private void btnPersonal_Click(object sender, EventArgs e)
         {
             clearPanels();
+            updateLists();
             pnlPersonal.Visible = true;
         }
 
@@ -48,6 +51,7 @@ namespace AdminServerManager
             pnlAddEducation.Visible = false;
             pnlAddCom.Visible = false;
             pnlAddTech.Visible = false;
+            pnlAdd.Visible = false;
         }
 
         private void updateLists()
@@ -60,14 +64,17 @@ namespace AdminServerManager
             foreach(var item in DataBase.Educations)
             {
                 lBoxEducation.Items.Add(item);
+                lBoxEducation.DisplayMember = "Course";
             }
             foreach(var item in DataBase.TechnicalKnowledges)
             {
                 lBoxTech.Items.Add(item);
+                lBoxTech.DisplayMember = "Skill";
             }
             foreach(var item in DataBase.CommonKnowledges)
             {
                 lBoxPersonal.Items.Add(item);
+                lBoxPersonal.DisplayMember = "Attribute";
             }
         }
 
@@ -96,6 +103,39 @@ namespace AdminServerManager
             clearPanels();
             pnlAdd.Visible = true;
             pnlAddCom.Visible = true;
+        }
+
+        private void btnAddAdd_Click(object sender, EventArgs e)
+        {
+            if (rBtnEdu.Checked == true && rBtnTechKnow.Checked == false && rBtnComKnow.Checked == false)
+            {
+                Education temp = new Education() { School = txtBoxAddEduSchool.Text, Course = txtBoxAddEduCourse.Text, Period = txtBoxAddEduPeriod.Text };
+
+                DataBase.Educations.Add(temp);
+                DataBase.SaveChanges();
+
+                MessageBox.Show("Added to database!");
+            }
+
+            if (rBtnEdu.Checked == false && rBtnTechKnow.Checked == true && rBtnComKnow.Checked == false)
+            {
+                TechnicalKnowledge temp = new TechnicalKnowledge() { Skill = txtBoxAddTechSkill.Text, Proficiency = txtBoxAddTechProf.Text };
+
+                DataBase.TechnicalKnowledges.Add(temp);
+                DataBase.SaveChanges();
+
+                MessageBox.Show("Added to database!");
+            }
+
+            if (rBtnEdu.Checked == false && rBtnTechKnow.Checked == false && rBtnComKnow.Checked == true)
+            {
+                CommonKnowledge temp = new CommonKnowledge() { CommonSkill = txtBAddComAttri.Text, CommonProficiency = txtBoxAddComDesc.Text };
+
+                DataBase.CommonKnowledges.Add(temp);
+                DataBase.SaveChanges();
+
+                MessageBox.Show("Added to database!");
+            }
         }
     }
 }
