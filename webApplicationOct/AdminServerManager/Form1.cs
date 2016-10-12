@@ -20,38 +20,7 @@ namespace AdminServerManager
         {
             InitializeComponent();
             DataBase = new T4DBEntities();
-        }
-
-        private void btnEducation_Click(object sender, EventArgs e)
-        {
-            clearPanels();
             updateLists();
-            pnlEducation.Visible = true;
-        }
-
-        private void btnTech_Click(object sender, EventArgs e)
-        {
-            clearPanels();
-            updateLists();
-            pnlTech.Visible = true;
-        }
-
-        private void btnPersonal_Click(object sender, EventArgs e)
-        {
-            clearPanels();
-            updateLists();
-            pnlPersonal.Visible = true;
-        }
-
-        private void clearPanels()
-        {
-            pnlEducation.Visible = false;
-            pnlPersonal.Visible = false;
-            pnlTech.Visible = false;
-            pnlAddEducation.Visible = false;
-            pnlAddCom.Visible = false;
-            pnlAddTech.Visible = false;
-            pnlAdd.Visible = false;
         }
 
         private void updateLists()
@@ -81,28 +50,26 @@ namespace AdminServerManager
         private void rBtnEdu_CheckedChanged(object sender, EventArgs e)
         {
             clearPanels();
-            pnlAdd.Visible = true;
             pnlAddEducation.Visible = true;            
         }
 
         private void rBtnTechKnow_CheckedChanged(object sender, EventArgs e)
         {
             clearPanels();
-            pnlAdd.Visible = true;
             pnlAddTech.Visible = true;
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            clearPanels();
-            pnlAdd.Visible = true;
         }
 
         private void rBtnComKnow_CheckedChanged(object sender, EventArgs e)
         {
             clearPanels();
-            pnlAdd.Visible = true;
             pnlAddCom.Visible = true;
+        }
+
+        private void clearPanels()
+        {
+            pnlAddCom.Visible = false;
+            pnlAddEducation.Visible = false;
+            pnlAddTech.Visible = false;
         }
 
         private void btnAddAdd_Click(object sender, EventArgs e)
@@ -115,6 +82,7 @@ namespace AdminServerManager
                 DataBase.SaveChanges();
 
                 MessageBox.Show("Added to database!");
+                updateLists();
             }
 
             if (rBtnEdu.Checked == false && rBtnTechKnow.Checked == true && rBtnComKnow.Checked == false)
@@ -125,6 +93,7 @@ namespace AdminServerManager
                 DataBase.SaveChanges();
 
                 MessageBox.Show("Added to database!");
+                updateLists();
             }
 
             if (rBtnEdu.Checked == false && rBtnTechKnow.Checked == false && rBtnComKnow.Checked == true)
@@ -135,6 +104,7 @@ namespace AdminServerManager
                 DataBase.SaveChanges();
 
                 MessageBox.Show("Added to database!");
+                updateLists();
             }
         }
     }
