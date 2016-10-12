@@ -16,5 +16,6 @@ namespace AdminServerManager
     {
         public string Skill { get; set; }
         public string Proficiency { get; set; }
+        public int Id { get; set; }
     }
 }

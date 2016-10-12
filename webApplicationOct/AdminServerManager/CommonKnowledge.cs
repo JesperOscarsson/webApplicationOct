@@ -16,5 +16,6 @@ namespace AdminServerManager
     {
         public string CommonSkill { get; set; }
         public string CommonProficiency { get; set; }
+        public int Id { get; set; }
     }
 }

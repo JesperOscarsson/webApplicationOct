@@ -43,7 +43,7 @@ namespace AdminServerManager
             foreach(var item in DataBase.CommonKnowledges)
             {
                 lBoxPersonal.Items.Add(item);
-                lBoxPersonal.DisplayMember = "Attribute";
+                lBoxPersonal.DisplayMember = "CommonSkill";
             }
         }
 
